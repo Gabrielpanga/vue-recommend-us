@@ -1,6 +1,10 @@
 <template>
     <v-banner single-line>
-        <b> {{ recommendation.name }} </b> recommended <b> {{ recommendation.recommended.name }} </b>
+        <b>{{ recommendation.name }}</b>
+
+        <span>recommended</span>
+
+        <b>{{ recommendation.recommended.name }}</b>
 
         <template v-slot:actions>
             <v-btn
@@ -21,6 +25,6 @@
 
 <script>
 export default {
-    props: ['recommendation']
-}
+  props: ['recommendation'],
+};
 </script>

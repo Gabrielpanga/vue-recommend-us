@@ -47,7 +47,7 @@
         fill-height
       >
         <v-layout
-          align-center 
+          align-center
         >
           <router-view></router-view>
         </v-layout>
