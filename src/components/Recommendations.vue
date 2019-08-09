@@ -1,40 +1,25 @@
 <template>
-    <v-flex md-12>
-        <app-recomnendation
-            v-for="(recommendation, index) in recommendations"
-            :key="index"
-            :recommendation="recommendation"
-        >
-        </app-recomnendation>
-    </v-flex>
+  <v-flex md-12>
+    <app-recomnendation
+      v-for="(recommendation, index) in recommendations"
+      :key="index"
+      :recommendation="recommendation"
+    />
+  </v-flex>
 </template>
 
 <script>
-import Recommendation from './Recommendation'
+import Recommendation from './Recommendation';
 
 export default {
-    data() {
-        return {
-            recommendations: [
-                {
-                    name: 'Carlos',
-                    recommended: {
-                        name: 'Raul',
-                        telephone: '123-456-789',
-                    }
-                },
-                {
-                    name: 'Carlos',
-                    recommended: {
-                        name: 'Florencia',
-                        telephone: '123-456-789',
-                    }
-                },
-            ]
-        }
+  components: {
+    appRecomnendation: Recommendation,
+  },
+  props: {
+    recommendations: {
+      required: true,
+      type: Array,
     },
-    components: {
-        appRecomnendation: Recommendation,
-    }
-}
+  },
+};
 </script>

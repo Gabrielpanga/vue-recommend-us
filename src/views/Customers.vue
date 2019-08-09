@@ -1,4 +1,4 @@
 
 <template>
-    <h1>My registered customers</h1>
+  <h1>My registered customers</h1>
 </template>
