@@ -5,28 +5,40 @@
       app
     >
       <v-list dense>
-        <v-list-item >
+        <v-list-item>
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>
+              <router-link to="/">
+                Dashboard
+              </router-link>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item >
+        <v-list-item>
           <v-list-item-action>
             <v-icon>mdi-mail</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Customers</v-list-item-title>
+            <v-list-item-title>
+              <router-link to="/customers">
+                Customers
+              </router-link>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item >
+        <v-list-item>
           <v-list-item-action>
             <v-icon>mdi-star</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Recommendations</v-list-item-title>
+            <v-list-item-title>
+              <router-link to="/my">
+                My recommendations
+              </router-link>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -37,7 +49,7 @@
       color="indigo"
       dark
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Recommendator</v-toolbar-title>
     </v-app-bar>
 
@@ -49,7 +61,7 @@
         <v-layout
           align-center
         >
-          <router-view></router-view>
+          <router-view />
         </v-layout>
       </v-container>
     </v-content>
