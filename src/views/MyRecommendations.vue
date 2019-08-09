@@ -3,16 +3,19 @@
     fill-height
     md-12
   >
+    <v-btn
+      right
+      class="btn-invite white--text"
+      @click="addRecommendationClick"
+      color="teal"
+    >
+      Recommend!
+    </v-btn>
     <h1>My recommendations</h1>
-    <v-flex>
-      <v-btn
-        primary
-        @click="addRecommendationClick"
-      >
-        Recommend!
-      </v-btn>
-    </v-flex>
-    <hr>
+
+    <v-divider light>
+      
+    </v-divider>
     <app-recommendations :recommendations="recommendations" />
   </v-flex>
 </template>
@@ -47,14 +50,26 @@ export default {
     }),
     addRecommendationClick() {
       this.addRecommendation({
-        id: 1,
+        email: 'carlos@tpvrg.com',
         name: 'Carlos',
-        recommended: {
-          name: 'Raul',
-          telephone: '123-456-789',
+        telephone: '123-456-789',
+        cellphone: '123-456-789',
+        addressLine1: 'Av. Maipu 12345',
+        addressLine2: '1ª B',
+        country: 'Spain',
+        recommendedBy: {
+          name: 'Raul Serran',
+          userId: '', // TODO Fill with current userId
         },
       });
     },
   },
 };
 </script>
+
+
+<style>
+  .btn-invite {
+    float: right;
+  }
+</style>

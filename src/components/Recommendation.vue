@@ -1,21 +1,45 @@
 <template>
-  <v-banner single-line>
+  <v-banner
+    class="p-banner"
+    elevation="2"
+  >
+    <v-avatar
+      slot="icon"
+      color="amber accent-4"
+      size="40"
+    >
+      <v-icon
+        icon="mdi-star"
+        color="white"
+      >
+        mdi-star
+      </v-icon>
+    </v-avatar>
     <b>{{ recommendation.name }}</b>
 
-    <span>recommended</span>
+    <span> was recommended by </span>
 
-    <b>{{ recommendation.recommended.name }}</b>
+    <b>{{ recommendation.recommendedBy.name }}</b>
 
     <template v-slot:actions>
       <v-btn
+        v-if="isAdmin"
         text
-        color="deep-green accent-4"
+        color="blue accent-4"
+      >
+        Archive
+      </v-btn>
+      <v-btn
+        v-if="isAdmin"
+        text
+        color="red lighten-1"
       >
         Dismiss
       </v-btn>
       <v-btn
+        v-if="isAdmin"
         text
-        color="deep-purple accent-4"
+        color="teal"
       >
         Confirm
       </v-btn>
@@ -30,6 +54,19 @@ export default {
       required: true,
       type: Object,
     },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
+
+<style>
+  .p-banner {
+    margin-bottom: 10px
+  }
+  .p-banner {
+    margin-top: 10px
+  }
+</style>

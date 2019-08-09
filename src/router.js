@@ -28,5 +28,10 @@ export default new Router({
       name: 'my-recommendations',
       component: () => import('./views/MyRecommendations.vue'),
     },
+    {
+      path: '/new',
+      name: 'new-recommendation',
+      component: () => import('./views/NewRecommendation.vue'),
+    },
   ],
 });
