@@ -1,5 +1,7 @@
 # recommend-us
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Gabrielpanga/recommend-us.svg)](https://greenkeeper.io/)
+
 ## Project setup
 ```
 npm install
